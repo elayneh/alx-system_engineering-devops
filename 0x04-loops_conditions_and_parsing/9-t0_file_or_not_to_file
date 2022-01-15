@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 # gives info about the ALX file
 
-FILE="holbertonschool"
+FILE="school"
 if [ -e $FILE ]
 then
-    echo "holbertonschool file exists"
+    echo "school file exists"
     if [ -s $FILE ]
     then
 	echo "school file is not empty"
