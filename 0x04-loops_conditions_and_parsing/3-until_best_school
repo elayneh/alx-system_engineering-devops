@@ -1,14 +1,9 @@
 #!/usr/bin/env bash
-# displays ALX School 10 times.
+#displays Best School 10 times.
 
-COUNTER=0
-while [ $COUNTER -lt 11 ]
+counter=10
+until [ $counter -lt 1]
 do
-    if [ $COUNTER = 9 ]
-    then
-        echo "Hi"
-    else
-        echo "Best School"
-    fi
-    let COUNTER+=1
+	echo "Best School"
+	let counter-=1
 done
