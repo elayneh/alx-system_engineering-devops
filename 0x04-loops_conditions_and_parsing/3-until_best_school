@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
-counter = 0
-until [ $counter -le 5 ]
+counter=10
+until [ $counter -lt 1 ]
 do
 	echo "Best School"
-done;
+	let counter-=1
+done
