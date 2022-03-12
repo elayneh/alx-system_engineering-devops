@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # This bash script is to connect to the server with a private key passphrase considered
 
-ssh -i ~./ssh/school ubuntu@localhost
+ssh -i ~./ssh/school ubuntu@127.0.0.1
