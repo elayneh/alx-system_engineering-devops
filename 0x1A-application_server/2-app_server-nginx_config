@@ -2,25 +2,21 @@ server {
 	listen 80 default_server;
 	listen [::]:80 default_server;
 
-	server_name _;
-
 location /hbnb_static/ {
 	alias /data/web_static/current/;
 }
 
-rewrite ^/redirect_me https://https://github.com/elayneh/alx-system_engineering-devops permanent;
+rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;
 
 error_page 404 /error_404.html;
 
 	root /var/www/html;
-	
-	index index.html index.htm index.nginx-debian.html;
-	
-add_header X-Served-By 1911-web-01;
 
-	location /airbnb-onepage/ {
-		alias ~/Airbnb_clone_v2/;
-		index index.html index.htm index.nginx-debian.html;
-		proxy_pass http://0.0.0.0:5000;
+	index index.html index.htm index.nginx-debian.html;
+
+	server_name _;
+add_header X-Served-By 1637-web-01;
+
+	        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
 	}
 }
