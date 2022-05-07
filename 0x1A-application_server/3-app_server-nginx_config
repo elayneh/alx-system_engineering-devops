@@ -8,7 +8,9 @@ server {
                 proxy_pass http://127.0.0.1:5000;
         }
 	location ~ /airbnb-dynamic/number_odd_or_even/[0-9]+ {
-		rewrite /airbnb-dynamic/number_odd_or_even/[0-9]+ /number_odd_or_even/$1 last;
+		rewrite /airbnb-dynamic/number_odd_or_even/([0-9]+) /number_odd_or_even/$1 last;
+	}
+	location ~ /number_odd_or_even/[0-9]+ {
 		proxy_pass http://127.0.0.1:5001;
 	}
         rewrite ^/redirect_me https://github.com/ permanent;
